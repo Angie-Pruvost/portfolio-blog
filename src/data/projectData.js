@@ -14,7 +14,7 @@ export const projects = [
     slug: "gameplay",
     title: "GamePlay",
     description:
-      "Marketplace de venta de productos alimenticios con consumo de API REST.",
+      "Marketplace colaborativo de venta de productos alimenticios con consumo de API REST.",
     longDescription:
       "Aplicación web desarrollada en JavaScript que consume APIs para mostrar productos dinámicos, con diseño responsive.",
     stack: ["HTML", "CSS", "JavaScript"],

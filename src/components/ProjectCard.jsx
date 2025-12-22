@@ -12,6 +12,9 @@ export default function ProjectCard({
 }) {
   return (
     <article className="project-card">
+      <h3>{title}</h3>
+      <p className="project-desc">{description}</p>
+      
       {image && (
         <div className="project-image">
           <img src={image} alt={title} />
@@ -19,8 +22,7 @@ export default function ProjectCard({
       )}
 
       <div className="project-content">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        
 
         <div className="tech-list">
           {Array.isArray(tech) &&
