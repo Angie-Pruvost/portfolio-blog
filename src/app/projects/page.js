@@ -24,7 +24,7 @@ export default function ProjectsPage() {
 
   return (
     <section className="projects-page">
-      <h3>Proyectos</h3>
+      <h1>Proyectos</h1>
 <br></br>
       <div className="projects-grid">
         {projects.map((project, index) => (

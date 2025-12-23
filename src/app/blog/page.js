@@ -1,36 +1,33 @@
-import Link from "next/link";
-
-const posts = [
-  {
-    slug: "mi-primer-proyecto",
-    title: "Mi primer proyecto como desarrolladora",
-    excerpt: "Cómo fue crear mi primer sistema completo."
-  },
-  {
-    slug: "aprendiendo-react",
-    title: "Aprendiendo React desde cero",
-    excerpt: "Errores comunes y aprendizajes reales."
-  }
-];
-
+import "./blog.css";
 
 export default function BlogPage() {
   return (
-    <section>
-      <h1>Blog</h1>
-      <p>Artículos sobre desarrollo, estudio y experiencias</p>
+    <section className="blog-page">
+      <header className="blog-header reveal">
+        <h1>Blog</h1>
+        <p>
+          Ideas, aprendizajes y experiencias sobre desarrollo y tecnología.
+        </p>
+      </header>
 
-      <ul>
-        {posts.map(post => (
-          <li key={post.slug}>
-            <h3>{post.title}</h3>
-            <p>{post.excerpt}</p>
-            <Link href={`/blog/${post.slug}`}>
-              Leer más →
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="blog-grid">
+        {/* CARD */}
+        <article className="blog-card reveal delay-1">
+          <h2>Mi primer proyecto real</h2>
+          <p>
+            Qué aprendí desarrollando una aplicación completa desde cero.
+          </p>
+          <a href="/blog/mi-primer-proyecto">Leer artículo →</a>
+        </article>
+
+        <article className="blog-card reveal delay-2">
+          <h2>Errores comunes en proyectos frontend</h2>
+          <p>
+            Cosas que nadie te dice cuando empezás a programar interfaces.
+          </p>
+          <a href="/blog/errores-frontend">Leer artículo →</a>
+        </article>
+      </div>
     </section>
   );
 }

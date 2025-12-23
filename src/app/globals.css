@@ -16,27 +16,38 @@
 }
 
 [data-theme="light"] {
-  --bg: #f8fafc;
-  --bg-soft: #ffffff;
-  --bg-card: #ffffff;
+    --bg: #f1f3f6;              /* gris cremoso */
+  --bg-soft: #e6e9ee;         /* navbar / headers */
+  --bg-card: #f8f9fb;         /* cards suaves */
 
-  --text-main: #020617;
-  --text-soft: #262f3d;
+  --text-main: #2b2f33;       /* gris oscuro */
+  --text-soft: #6b7280;       /* lectura */
 
-  --primary: #4f46e5;
-  --border-soft: rgba(0,0,0,0.08);
+  --primary: #5b7cfa;
+  --primary-hover: #4a67d6;
+
+  --border-soft: rgba(0, 0, 0, 0.06);
+
+  --shadow-soft: 
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    0 12px 32px rgba(0, 0, 0, 0.05);
 }
 
 /* DARK MODE (default) */
 [data-theme="dark"] {
-  --bg-main: #030712;
-  --bg-card: #111827;
-  --bg-soft: #1f2933;
+  --bg: #0d1117;
+  --bg-soft: #161b22;
+  --bg-card: #1f2937;
 
-  --text-main: #e5e7eb;
-  --text-soft: #9ca3af;
+  --text-main: #e6edf3;
+  --text-soft: #9da7b1;
+
+  --primary: #58a6ff;
+  --primary-hover: #1f6feb;
 
   --border-soft: rgba(255, 255, 255, 0.08);
+
+  --shadow-soft: 0 8px 28px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -44,17 +55,29 @@
 /* =========================
    RESET + BASE
 ========================= */
+html {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+    font-size: 16px;
+}
 
 * {
-  box-sizing: border-box;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
+  line-height: 1.65;
+  font-weight: 400;
   color: var(--text-main);
   transition: background var(--transition), color var(--transition);
+  -webkit-font-smoothing: antialiased;
 }
 
 /* =========================
@@ -86,6 +109,15 @@ body {
   animation: revealUp 0.8s ease forwards;
 }
 
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
 @keyframes revealUp {
   to {
     opacity: 1;
@@ -101,4 +133,49 @@ body {
   h1 {
     font-size: 2.2rem;
   }
+}
+/* ===============================
+   🔠 HEADINGS
+================================ */
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-soft);
+  max-width: 65ch;
+}
+
+.section {
+  padding: clamp(3rem, 6vw, 6rem) 1.5rem;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  max-width: 60ch;
 }

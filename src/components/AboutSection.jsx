@@ -1,29 +1,33 @@
 import Image from "next/image";
 import "../styles/about.css";
 
-export default function AboutSection() {
+
+  export default function AboutPage() {
   return (
-     <section className="about-section">
+    <section className="about-page page-transition active">
+
       {/* BANNER */}
       <div className="about-banner">
-        <Image
+        <img
           src="/about-banner.jpg"
-          alt="Banner sobre mí"
-          fill
-          priority
+          alt="Banner"
           className="about-banner-img"
         />
         <div className="about-banner-overlay" />
-        
+        <h1 className="about-title">Sobre mí</h1>
       </div>
 
-{/* CONTENIDO */}
-      <div className="about-content">
-        <h2>Sobre mí</h2>
-      <br />
-        <p className="about-highlight">
-          Desarrolladora de software enfocada en aplicaciones web modernas.
-        </p>
+      {/* CONTENT */}
+      <div className="about-container reveal">
+        <div className="about-image">
+          <img src="/sobre-mi.jpg" alt="Perfil" />
+        </div>
+
+        <div className="about-content">
+          <h1>Hola, soy Mariangel</h1>
+          <p className="about-highlight">
+            Desarrolladora enfocada en web y aplicaciones modernas
+          </p>
 
         <p>
           Me especializo en el desarrollo de aplicaciones utilizando tecnologías
@@ -39,6 +43,9 @@ export default function AboutSection() {
           Estoy abierta a aprender nuevas tecnologías y metodologías de desarrollo para seguir creciendo profesionalmente.
         </p>
       </div>
+      </div>
     </section>
   );
-}
+  }
+
+

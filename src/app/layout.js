@@ -12,6 +12,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  const theme = localStorage.getItem("theme");
+                  if (theme) {
+                    document.documentElement.setAttribute("data-theme", theme);
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body>
         <ThemeProvider>
           <Navbar />
