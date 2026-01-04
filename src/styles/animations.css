@@ -1,0 +1,49 @@
+/* ================================
+   ANIMACIONES GLOBALES
+================================ */
+
+/* Base: elementos ocultos */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+/* Cuando entra en pantalla */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variante lateral (opcional) */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Delay progresivo */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Respeta accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}

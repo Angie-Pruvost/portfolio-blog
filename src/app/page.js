@@ -10,7 +10,7 @@ export default function HomePage() {
         <div className="hero-content">
           <div className="hero-text">
             <h1>
-              Hola, soy <span>Mariangel Pruvost</span>
+              Hola, soy <span>Angie</span>
             </h1>
             <h2>Desarrolladora Full Stack</h2>
             <p>
@@ -41,7 +41,7 @@ export default function HomePage() {
             <h3>Frontend</h3>
             <ul>
               <li>HTML5</li>
-              <li>CSS3 / Responsive Design</li>
+              <li>CSS / Responsive Design</li>
               <li>JavaScript (ES6+)</li>
               <li>React</li>
               <li>Next.js</li>

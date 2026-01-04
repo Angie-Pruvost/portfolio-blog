@@ -85,13 +85,13 @@ body {
 ========================= */
 
 .page {
-  animation: pageFade 0.6s ease both;
+  animation: pageFade 0.6s ease-out both;
 }
 
 @keyframes pageFade {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -114,9 +114,17 @@ body {
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
+.delay-1 {
+  animation-delay: 0.15s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.45s;
+}
 
 @keyframes revealUp {
   to {
@@ -124,6 +132,8 @@ body {
     transform: translateY(0);
   }
 }
+
+
 
 /* =========================
    RESPONSIVE BASE
@@ -178,4 +188,22 @@ p {
   font-size: 1.05rem;
   color: var(--text-soft);
   max-width: 60ch;
+}
+/* ===============================
+   TRANSICIÓN ENTRE RUTAS
+================================ */
+
+.page-transition {
+  animation: routeFade 0.45s ease-out both;
+}
+
+@keyframes routeFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

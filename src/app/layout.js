@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";//acá uso el componente del navBar
 import Footer from "../components/Footer";
 import PageTransition from "../components/PageTransition";
 import { ThemeProvider } from "../context/ThemeContext";
+import RevealProvider from "../components/RevealProvider";
 
 export const metadata = {
   title: "Portfolio | Mariangel",
@@ -30,8 +31,12 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <ThemeProvider>
+          <RevealProvider />
           <Navbar />
-          <PageTransition>{children}</PageTransition>
+          <main>
+             <PageTransition>{children}</PageTransition>
+          </main>
+         
           <Footer />
         </ThemeProvider>
       </body>

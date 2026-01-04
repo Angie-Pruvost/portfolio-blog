@@ -9,7 +9,7 @@ export default function ProjectsPage() {
       slug: "crypto-cat",
       description: "Sistema de gestión de criptomonedas.",
       tech: ["Vue", "ASP.NET", "SQL Server","C#","javaScript","CSS", "HTML"],
-      image: "/projects/cryptocat.png",
+      image: "/criptoCat.png",
       github: "https://github.com/Angie-Pruvost/proyectoProgIII-CryptoCat.git",
     },
     {
@@ -17,7 +17,7 @@ export default function ProjectsPage() {
       slug: "gameplay",
       description: "Marketplace estilo Rappi.",
       tech: ["HTML", "CSS", "JavaScript","TypeScript","NestJS", "vue"],
-      image: "/projects/marketplace.png",
+      image: "/rappi.png",
       github: "https://github.com/Bunkiss/pedidosSanFran.git",
     },
   ];

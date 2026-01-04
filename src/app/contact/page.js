@@ -39,16 +39,16 @@ export default function ContactPage() {
           <ul className="contact-links">
             <li>
               <span>Email:</span>
-              <a href="mailto:tuemail@email.com">mariangelpruvost94@gmail.com</a>
+              <a href="mailto:tuemail@email.com"> mariangelpruvost94@gmail.com</a>
             </li>
             <li>
-              <span>GitHub:</span>
+              <span>GitHub: </span>
               <a href="https://github.com/Angie-Pruvost" target="_blank">
-                github.com/Angie-Pruvost
+                 github.com/Angie-Pruvost
               </a>
             </li>
             <li>
-              <span>LinkedIn:</span>
+              <span>LinkedIn: </span>
               <a href="https://www.linkedin.com/in/mariangel-pruvost-866239375/" target="_blank">
                 linkedin.com/in/mariangel-pruvost
               </a>

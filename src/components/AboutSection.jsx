@@ -24,7 +24,7 @@ import "../styles/about.css";
         </div>
 
         <div className="about-content">
-          <h1>Hola, soy Mariangel</h1>
+          <h1>Hola, soy Angie</h1>
           <p className="about-highlight">
             Desarrolladora enfocada en web y aplicaciones modernas
           </p>

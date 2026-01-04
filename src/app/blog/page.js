@@ -1,33 +1,48 @@
 import "./blog.css";
+import Link from "next/link";
+
+const blogPosts = [
+  {
+    slug: "mi-primer-proyecto",
+    title: "Mi primer proyecto real",
+    excerpt:
+      "Un proyecto real cambia completamente la forma en la que aprendés a programar.",
+    date: "Julio 2025",
+  },
+  {
+    slug: "errores-frontend",
+    title: "Errores comunes en proyectos frontend",
+    excerpt:
+      "Cosas que nadie te dice cuando empezás a programar interfaces.",
+    date: "Agosto 2025",
+  },
+];
 
 export default function BlogPage() {
   return (
-    <section className="blog-page">
+    <section className="page blog-list">
       <header className="blog-header reveal">
-        <h1>Blog</h1>
+        <h1>Bienvenidos a mi Blog</h1>
         <p>
-          Ideas, aprendizajes y experiencias sobre desarrollo y tecnología.
+          En este espacio comparto mi experiencia estudiando programación,
+          rompiendo mitos y acompañando a quienes recién comienzan.
         </p>
       </header>
 
       <div className="blog-grid">
-        {/* CARD */}
-        <article className="blog-card reveal delay-1">
-          <h2>Mi primer proyecto real</h2>
-          <p>
-            Qué aprendí desarrollando una aplicación completa desde cero.
-          </p>
-          <a href="/blog/mi-primer-proyecto">Leer artículo →</a>
-        </article>
-
-        <article className="blog-card reveal delay-2">
-          <h2>Errores comunes en proyectos frontend</h2>
-          <p>
-            Cosas que nadie te dice cuando empezás a programar interfaces.
-          </p>
-          <a href="/blog/errores-frontend">Leer artículo →</a>
-        </article>
+        {blogPosts.map((post, index) => (
+          <article
+            key={post.slug}
+            className={`blog-card reveal delay-1${index + 1}`}
+          >
+            <span className="blog-card-date">{post.date}</span>
+            <h2>{post.title}</h2>
+            <p>{post.excerpt}</p>
+            <a href={`/blog/${post.slug}`}>Leer artículo →</a>
+          </article>
+        ))}
       </div>
     </section>
   );
 }
+
