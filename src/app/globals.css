@@ -207,3 +207,18 @@ p {
     transform: translateY(0);
   }
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}

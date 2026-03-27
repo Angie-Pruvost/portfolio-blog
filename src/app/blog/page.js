@@ -1,5 +1,7 @@
-import "./blog.css";
+"use client";
+
 import Link from "next/link";
+import "./blog.css";
 
 const blogPosts = [
   {
@@ -21,28 +23,27 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <section className="page blog-list">
-      <header className="blog-header reveal">
-        <h1>Bienvenidos a mi Blog</h1>
-        <p>
-          En este espacio comparto mi experiencia estudiando programación,
-          rompiendo mitos y acompañando a quienes recién comienzan.
-        </p>
+
+      <header className="blog-header">
+        <h1>Blog</h1>
       </header>
 
       <div className="blog-grid">
-        {blogPosts.map((post, index) => (
-          <article
-            key={post.slug}
-            className={`blog-card reveal delay-1${index + 1}`}
-          >
-            <span className="blog-card-date">{post.date}</span>
+        {blogPosts.map((post) => (
+          <article key={post.slug} className="blog-card">
+            <span>{post.date}</span>
             <h2>{post.title}</h2>
             <p>{post.excerpt}</p>
-            <a href={`/blog/${post.slug}`}>Leer artículo →</a>
+
+            {/* 🔥 IMPORTANTE */}
+            <Link href={`/blog/${post.slug}`}>
+              Leer artículo →
+            </Link>
+
           </article>
         ))}
       </div>
+
     </section>
   );
 }
-
